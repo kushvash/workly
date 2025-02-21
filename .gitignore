@@ -4,8 +4,6 @@
 # Node.js modules
 node_modules/
 
-.next
-
 # Environment variables
 .env
 .env.*
@@ -40,6 +38,7 @@ local_db/
 # =======================
 # Client (Next.js + Firebase Hosting)
 # =======================
+.next
 client/.next/          # Next.js build output
 client/out/            # Static exports
 client/node_modules/   # Client dependencies
