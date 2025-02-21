@@ -3,6 +3,10 @@ import PomodoroTimer from "../components/PomodoroTimer";
 import { useEffect, useState } from "react";
 import { auth } from "../firebaseConfig";
 import { useRouter } from "next/router";
+import TeamUpdates from "../components/TeamUpdates";
+import VideoCall from "../components/VideoCall";
+
+
 
 export default function Dashboard() {
   const [user, setUser] = useState(null);
@@ -32,6 +36,8 @@ export default function Dashboard() {
       <button onClick={handleLogout}>Logout</button>
       <PomodoroTimer />
       <TaskTracker />
+      <TeamUpdates />
+      <VideoCall />
     </div>
   ) : (
     <p>Loading...</p>

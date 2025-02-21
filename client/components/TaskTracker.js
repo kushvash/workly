@@ -1,4 +1,6 @@
 // client/components/TaskTracker.js
+import socket from "../socket";
+// import { auth } from "../firebaseConfig";
 import { useState, useEffect } from "react";
 import { db, auth } from "../firebaseConfig";
 import { collection, addDoc, query, where, onSnapshot, deleteDoc, doc, updateDoc } from "firebase/firestore";
@@ -39,7 +41,9 @@ export default function TaskTracker() {
   };
 
   const handleDeleteTask = async (id) => {
+    const taskToDelete = tasks.find((t) => t.id === id);
     await deleteDoc(doc(db, "tasks", id));
+    socket.emit("task_completed", { text: taskToDelete.text, user: auth.currentUser.email });
   };
 
   const handleEditTask = async (id) => {
