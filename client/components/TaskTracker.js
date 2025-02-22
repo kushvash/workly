@@ -58,35 +58,42 @@ export default function TaskTracker() {
     setEditTaskText("");
   };
 
+
   return (
     <div>
-      <h2>Your Tasks</h2>
-      <input
-        type="text"
-        placeholder="Add a new task..."
-        value={task}
-        onChange={(e) => setTask(e.target.value)}
-      />
-      <button onClick={handleAddTask}>Add Task</button>
-
-      <ul>
+      <h2 className="text-xl font-semibold mb-4">Your Tasks</h2>
+      <div className="flex space-x-2">
+        <input
+          type="text"
+          placeholder="Add a new task..."
+          value={task}
+          onChange={(e) => setTask(e.target.value)}
+          className="flex-1 p-2 border rounded"
+        />
+        <button onClick={handleAddTask} className="bg-green-500 text-white px-4 rounded hover:bg-green-600">
+          Add
+        </button>
+      </div>
+      <ul className="mt-4 space-y-2">
         {tasks.map((t) => (
-          <li key={t.id}>
+          <li key={t.id} className="flex justify-between items-center bg-gray-50 p-2 rounded">
             {editTaskId === t.id ? (
               <>
                 <input
                   type="text"
                   value={editTaskText}
                   onChange={(e) => setEditTaskText(e.target.value)}
+                  className="flex-1 p-1 border rounded"
                 />
-                <button onClick={handleUpdateTask}>Save</button>
-                <button onClick={() => setEditTaskId(null)}>Cancel</button>
+                <button onClick={handleUpdateTask} className="ml-2 bg-blue-500 text-white px-2 rounded">Save</button>
               </>
             ) : (
               <>
-                {t.text}{" "}
-                <button onClick={() => handleEditTask(t.id)}>Edit</button>
-                <button onClick={() => handleDeleteTask(t.id)}>Delete</button>
+                <span>{t.text}</span>
+                <div className="space-x-2">
+                  <button onClick={() => handleEditTask(t.id)} className="bg-yellow-500 text-white px-2 rounded">Edit</button>
+                  <button onClick={() => handleDeleteTask(t.id)} className="bg-red-500 text-white px-2 rounded">Delete</button>
+                </div>
               </>
             )}
           </li>
@@ -94,4 +101,40 @@ export default function TaskTracker() {
       </ul>
     </div>
   );
+  // return (
+  //   <div>
+  //     <h2>Your Tasks</h2>
+  //     <input
+  //       type="text"
+  //       placeholder="Add a new task..."
+  //       value={task}
+  //       onChange={(e) => setTask(e.target.value)}
+  //     />
+  //     <button onClick={handleAddTask}>Add Task</button>
+
+  //     <ul>
+  //       {tasks.map((t) => (
+  //         <li key={t.id}>
+  //           {editTaskId === t.id ? (
+  //             <>
+  //               <input
+  //                 type="text"
+  //                 value={editTaskText}
+  //                 onChange={(e) => setEditTaskText(e.target.value)}
+  //               />
+  //               <button onClick={handleUpdateTask}>Save</button>
+  //               <button onClick={() => setEditTaskId(null)}>Cancel</button>
+  //             </>
+  //           ) : (
+  //             <>
+  //               {t.text}{" "}
+  //               <button onClick={() => handleEditTask(t.id)}>Edit</button>
+  //               <button onClick={() => handleDeleteTask(t.id)}>Delete</button>
+  //             </>
+  //           )}
+  //         </li>
+  //       ))}
+  //     </ul>
+  //   </div>
+  // );
 }
