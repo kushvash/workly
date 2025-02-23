@@ -1,6 +1,5 @@
 // client/components/TaskTracker.js
 import socket from "../socket";
-// import { auth } from "../firebaseConfig";
 import { useState, useEffect } from "react";
 import { db, auth } from "../firebaseConfig";
 import { collection, addDoc, query, where, onSnapshot, deleteDoc, doc, updateDoc } from "firebase/firestore";

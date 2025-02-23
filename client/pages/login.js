@@ -1,4 +1,6 @@
 // client/pages/login.js
+
+
 import { useState } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebaseConfig";
@@ -51,8 +53,9 @@ export default function Login() {
         </p>
       </div>
     </div>
-  );
+  
 
+);
   // return (
   //   <div>
   //     <h1>Login</h1>
