@@ -75,9 +75,8 @@ The platform enables teams to collaborate seamlessly in real-time, improving com
    Improve productivity with structured work sessions.
 
 5. **Start a Video Call:**  
-   - Enter the email of the user you wish to call.  
-   - The callee receives an incoming call notification with options to **Accept** or **Reject**.  
-   - Upon acceptance, both users can view each other’s video streams.  
+   - Enter Room Id and start the call.
+   - The call start when the other user enters the room and starts the call.
 
 ---
 
@@ -101,14 +100,7 @@ The platform enables teams to collaborate seamlessly in real-time, improving com
 
 ## 🌐 Live Demo & Code
 
-- **Live App:** [Workly Live](https://your-live-demo-link.com)  
-- **Source Code:** [GitHub Repository](https://github.com/your-repo)  
-
----
-
-## 🖼️ Screenshots
-
-> _Include screenshots or a demo GIF showcasing the dashboard, task management, Pomodoro timer, and video call feature here._
+- **Live App:** [Workly Live](https://workly-jd19bgnav-kushs-projects-5888f2a6.vercel.app/) 
 
 ---
 
