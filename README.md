@@ -52,9 +52,6 @@ The platform enables teams to collaborate seamlessly in real-time, improving com
 - **WebRTC Signaling:**  
   Developed a robust signaling system for **offer/answer exchanges** and **ICE candidate handling**, enabling stable peer-to-peer video calls.
 
-- **User-friendly Video Calls:**  
-  Replaced room-based calls with an **email-based calling system**, allowing users to easily initiate calls and receive notifications with accept/reject options.
-
 - **Responsive UI/UX:**  
   Utilized **Tailwind CSS** to create an interface that’s responsive across devices, ensuring smooth user interactions.
 
